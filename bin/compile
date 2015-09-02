@@ -96,7 +96,7 @@ echo "Meteor bundle file: `ls $BUNDLE_DEST`"
 echo "uncompressing and untarring the tar file"
 tar -xvzf $BUNDLE_DEST/*.tar.gz -C $BUNDLE_DEST
 mv $BUNDLE_DEST/bundle "$COMPILE_DIR/app"
-rmdir $BUNDLE_DEST
+rm -rf $BUNDLE_DEST
 
 # If we use npm, run npm install.
 if [ -e "$COMPILE_DIR"/app/programs/server/package.json ]; then
