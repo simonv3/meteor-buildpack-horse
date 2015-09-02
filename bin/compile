@@ -91,8 +91,8 @@ fi
 echo "-----> Building Meteor with ROOT_URL: $ROOT_URL"
 HOME=$METEOR_DIR $METEOR build --server $ROOT_URL --directory $BUNDLE_DEST
 echo "Meteor bundle file: `ls $BUNDLE_DEST`"
-echo "uncompressing and untarring the tar file"
-tar -xvzf $BUNDLE_DEST/*.tar.gz -C $BUNDLE_DEST
+# echo "uncompressing and untarring the tar file"
+# tar -xvzf $BUNDLE_DEST/*.tar.gz -C $BUNDLE_DEST
 mv $BUNDLE_DEST/bundle "$COMPILE_DIR/app"
 rm -rf $BUNDLE_DEST
 
